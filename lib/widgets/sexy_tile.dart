@@ -19,13 +19,13 @@ class SexyTile extends StatelessWidget {
       margin: EdgeInsets.all(15.0),
       child: Material(
         color: color,
-        elevation: 10.0,
-        borderRadius: BorderRadius.circular(15.0),
+        elevation: 3.0,
+        borderRadius: BorderRadius.circular(10.0),
         shadowColor: shadowColor(context),
         child: InkWell(
           child: child,
           splashColor: splashColor,
-          borderRadius: BorderRadius.circular(15.0),
+          borderRadius: BorderRadius.circular(10.0),
           onTap: onTap == null ? doNothing : () => onTap(),
         ),
       ),
