@@ -14,7 +14,7 @@ class PageOne extends StatelessWidget {
         itemCount: 8,
         itemBuilder: (BuildContext context, int index) => SexyTile(
           child: Center(
-            child: Text('Tile $index'),
+            child: Image.asset('assets/images/logo.png'),
           ),
         ),
         staggeredTileBuilder: (int index) =>
