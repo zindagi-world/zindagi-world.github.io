@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:zindagi/pages/page_one.dart';
 import 'package:zindagi/utils/colors.dart';
 import 'package:zindagi/widgets/sexy_tile.dart';
 
@@ -75,14 +76,12 @@ class _MyHomePageState extends State<MyHomePage> {
       body: PageView(
         controller: _pageController,
         children: <Widget>[
+          PageOne(),
           SexyTile(
-            child: Text('HI'),
+            child: Text('Page Two'),
           ),
           SexyTile(
-            child: Text('Ok'),
-          ),
-          SexyTile(
-            child: Text('by'),
+            child: Text('Page Three'),
           ),
         ],
       ),
