@@ -8,11 +8,12 @@ class PageOne extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: MyColors.primaryColor,
+      color: MyColors.white,
       child: StaggeredGridView.countBuilder(
         crossAxisCount: 4,
         itemCount: 8,
         itemBuilder: (BuildContext context, int index) => SexyTile(
+          color: MyColors.primaryColor,
           child: Center(
             child: Image.asset('assets/images/logo.png'),
           ),

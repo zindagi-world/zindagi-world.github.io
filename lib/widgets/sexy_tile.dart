@@ -6,16 +6,18 @@ import 'package:zindagi/utils/ui_helpers.dart';
 class SexyTile extends StatelessWidget {
   const SexyTile({
     this.child,
+    this.color,
     this.onTap,
   });
   final Widget child;
+  final Color color;
   final Function() onTap;
 
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.all(10.0),
       child: Material(
-        color: MyColors.white,
+        color: color,
         borderRadius: BorderRadius.circular(6.0),
         elevation: 3.0,
         shadowColor: ShadowColors.dark,
