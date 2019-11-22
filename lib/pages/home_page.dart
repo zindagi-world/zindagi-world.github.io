@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:zindagi/pages/page_one.dart';
+import 'package:zindagi/pages/page_two.dart';
 import 'package:zindagi/utils/colors.dart';
-import 'package:zindagi/widgets/sexy_tile.dart';
 
 class MyHomePage extends StatefulWidget {
   @override
@@ -10,7 +10,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  PageController _pageController = PageController(initialPage: 0);
+  PageController _pageController = PageController(initialPage: 1);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,27 +43,12 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           IconButton(
             icon: Icon(
-              Icons.favorite,
+              Icons.attach_money,
               color: MyColors.primaryColor,
             ),
             onPressed: () {
               _pageController.animateToPage(
                 1,
-                curve: Curves.easeOut,
-                duration: Duration(
-                  milliseconds: 750,
-                ),
-              );
-            },
-          ),
-          IconButton(
-            icon: Icon(
-              Icons.info,
-              color: MyColors.primaryColor,
-            ),
-            onPressed: () {
-              _pageController.animateToPage(
-                2,
                 curve: Curves.easeOut,
                 duration: Duration(
                   milliseconds: 750,
@@ -77,12 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
         controller: _pageController,
         children: <Widget>[
           PageOne(),
-          SexyTile(
-            child: Text('Page Two'),
-          ),
-          SexyTile(
-            child: Text('Page Three'),
-          ),
+          PageTwo(),
         ],
       ),
     );
